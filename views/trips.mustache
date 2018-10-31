@@ -1,0 +1,31 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/currenttrips.css"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+  <div id="currentTrips">
+    <label>Current Trips</label><br>
+    <a href="/addtrip" >Add Trip</a>
+  </div>
+  <ul id="cardStyle">
+    {{#tripList}}
+    <form id="card" action="/delete-trip" method="POST" style="
+    margin-right: 5%;margin-left: 5%">
+      <div class="card" style="width: 30rem;">
+        <img class="card-img-top" src="{{imgURL}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Trip to: {{cityName}}</h5>
+          <p class="card-text">Departure Date: {{dateDeparture}}</p>
+          <p class="card-text">Return Date: {{dateReturn}}</p>
+          <input type="hidden" name="cityName" value="{{cityName}}"/>
+          <input type="submit" value="Remove" />
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </form>
+    {{/tripList}}
+  </ul>
+</body>
+</html>

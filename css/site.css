@@ -1,0 +1,22 @@
+body {
+  background: url(travel.jpg) no-repeat center fixed;
+  background-size: cover;
+  text-align: center;
+  width:100%;
+  margin-right: auto;
+  margin-left: auto;
+
+
+}
+
+#frontpage{
+  margin-top: 15%
+}
+
+label{
+  font-size: 80px;
+}
+
+p{
+  font-size: 40px;
+}
